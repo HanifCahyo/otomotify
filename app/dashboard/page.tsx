@@ -46,12 +46,12 @@ export default function DashboardPage() {
     {
       id: 1,
       title: "Cara Membedakan Sparepart Asli dan Palsu",
-      image: "https://placehold.co/400x250",
+      image: "/images/HGP.webp",
     },
     {
       id: 2,
       title: "Tips Merawat Motor Agar Tetap Prima",
-      image: "https://placehold.co/400x250",
+      image: "/images/service.jpg",
     },
   ];
 
@@ -153,6 +153,7 @@ export default function DashboardPage() {
               <Card
                 key={article.id}
                 className="overflow-hidden cursor-pointer hover:bg-gray-50 transition-colors bg-neutral border border-border"
+                onClick={() => router.push(`/artikel/${article.id}`)}
               >
                 <Image
                   src={article.image}
